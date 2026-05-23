@@ -1,0 +1,30 @@
+.budget-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.result-card {
+  text-align: center;
+}
+
+.progress {
+  height: 18px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0;
+  background: var(--primary);
+  transition: 0.8s;
+}
+
+@media (max-width: 800px) {
+  .budget-layout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <meta name="description" content="TravelNest feedback and support">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TravelNest | Feedback</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/feedback.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="TravelNest Logo">
+        <span>TravelNest</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="generator.html">Generator</a></li>
+        <li><a href="mood.html">Mood</a></li>
+        <li><a class="active" href="feedback.html">Feedback</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>Feedback & Support</h1>
+      <p>Send us your questions or suggestions.</p>
+    </section>
+
+    <section class="support-layout">
+      <!-- Feedback Form -->
+      <form id="feedbackForm" class="card">
+        <div class="form-control">
+          <label for="name">Name</label>
+          <input type="text" id="name" required>
+        </div>
+
+        <div class="form-control">
+          <label for="email">Email</label>
+          <input type="email" id="email" required>
+        </div>
+
+        <div class="form-control">
+          <label for="message">Message</label>
+          <textarea id="message" required></textarea>
+        </div>
+
+        <button class="btn">Submit</button>
+
+        <p id="formMsg" class="message"></p>
+      </form>
+
+      <!-- FAQ Section -->
+      <div class="card faq">
+        <h2>FAQ</h2>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What is TravelNest?
+          </button>
+          <p class="faq-answer">
+            TravelNest is a web app to explore destinations and plan trips easily.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I save my trips?
+          </button>
+          <p class="faq-answer">
+            Yes, all saved trips are stored in your browser.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Does it work on mobile?
+          </button>
+          <p class="faq-answer">
+            Yes, the website uses responsive CSS and media queries.
+          </p>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need to sign up?
+          </button>
+          <p class="faq-answer">
+             No, you can use all features without creating an account.
+          </p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>TravelNest</h3>
+        <p>Dream. Plan. Travel. Repeat.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explorer.html">Destinations</a></li>
+          <li><a href="budget.html">Budget Planner</a></li>
+          <li><a href="feedback.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+
+        <form id="newsletterForm">
+          <label for="newsletterEmail">Email:</label>
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
+          >
+
+          <button type="submit" class="btn">
+            Subscribe
+          </button>
+        </form>
+
+        <p id="newsletterMsg" class="message"></p>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:10px;">
+      © 2026 TravelNest. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/feedback.js"></script>
+</body>
+</html>

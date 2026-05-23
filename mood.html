@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <meta name="description" content="Travel mood and destination tracking">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TravelNest | Travel Mood</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/mood.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="TravelNest Logo">
+        <span>TravelNest</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a href="generator.html">Generator</a></li>
+        <li><a class="active" href="mood.html">Mood</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>Travel Mood</h1>
+      <p>Choose a sound and track your travel plans.</p>
+    </section>
+
+    <!-- Sound Buttons -->
+    <div class="sound-grid">
+      <button class="btn sound-btn" data-sound="beach">
+        Beach Sound
+      </button>
+
+      <button class="btn sound-btn" data-sound="forest">
+        Forest Sound
+      </button>
+
+      <button class="btn sound-btn" data-sound="city">
+        City Sound
+      </button>
+    </div>
+
+    <!-- Tracker -->
+    <section class="card tracker">
+      <h2>Destination Tracker</h2>
+
+      <input
+        type="text"
+        id="trackDestination"
+        placeholder="Enter destination"
+      >
+
+      <select id="trackStatus">
+        <option value="Visited">Visited</option>
+        <option value="Planned">Planned</option>
+      </select>
+
+      <button id="trackBtn" class="btn">
+        Save
+      </button>
+
+      <p id="trackMsg" class="message"></p>
+
+      <ul id="trackList"></ul>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>TravelNest</h3>
+        <p>Dream. Plan. Travel. Repeat.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explorer.html">Destinations</a></li>
+          <li><a href="budget.html">Budget Planner</a></li>
+          <li><a href="feedback.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+
+        <form id="newsletterForm">
+          <label for="newsletterEmail">Email:</label>
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
+          >
+
+          <button type="submit" class="btn">
+            Subscribe
+          </button>
+        </form>
+
+        <p id="newsletterMsg" class="message"></p>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:10px;">
+      © 2026 TravelNest. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Audio Player -->
+  <audio id="audioPlayer" loop></audio>
+
+  <script src="js/main.js"></script>
+  <script src="js/mood.js"></script>
+</body>
+</html>

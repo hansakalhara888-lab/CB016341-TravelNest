@@ -1,0 +1,87 @@
+.filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.filters input,
+.filters select {
+  flex: 1;
+}
+
+.destination-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.destination-card {
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.destination-card:hover {
+  transform: translateY(-6px);
+}
+
+.destination-card img {
+  height: 190px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.destination-card h3 {
+  margin-top: 1rem;
+  color: var(--secondary);
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.modal-content {
+  background: white;
+  max-width: 650px;
+  width: 100%;
+  padding: 2rem;
+  border-radius: var(--radius);
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 12px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+td,
+th {
+  border: 1px solid #ddd;
+  padding: 0.7rem;
+}
+
+@media (max-width: 800px) {
+  .destination-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .filters {
+    flex-direction: column;
+  }
+}

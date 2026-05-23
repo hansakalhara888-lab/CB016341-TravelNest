@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="description" content="Random trip generator for TravelNest">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>TravelNest | Random Trip Generator</title>
+
+  <link rel="icon" href="favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/generator.css">
+</head>
+
+<body>
+  <header>
+    <nav class="navbar container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="TravelNest Logo">
+        <span>TravelNest</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="explorer.html">Explorer</a></li>
+        <li><a href="budget.html">Budget</a></li>
+        <li><a class="active" href="generator.html">Generator</a></li>
+        <li><a href="mood.html">Mood</a></li>
+        <li><a href="feedback.html">Feedback</a></li>
+      </ul>
+
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="page-title">
+      <h1>Random Trip Generator</h1>
+      <p>Let TravelNest suggest your next adventure.</p>
+    </section>
+
+    <div class="generator-box card">
+      <div class="form-control">
+        <label for="travelType">Travel type</label>
+
+        <select id="travelType">
+          <option value="adventure">Adventure</option>
+          <option value="relaxation">Relaxation</option>
+          <option value="cultural">Cultural</option>
+          <option value="nature">Nature</option>
+        </select>
+      </div>
+
+      <div class="form-control">
+        <label for="budgetRange">Budget range</label>
+
+        <select id="budgetRange">
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <!-- Generate Button -->
+      <button id="generateBtn" class="btn">
+        Generate Trip
+      </button>
+    </div>
+
+    <div id="tripResult" class="card trip-result"></div>
+
+    <section class="card wishlist-panel">
+      <h2>Personal Wishlist</h2>
+
+      <ul id="wishlistList" class="wishlist-list"></ul>
+
+      <p id="emptyWishlistMsg" class="message">
+        No destinations saved yet.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>
+        <h3>TravelNest</h3>
+        <p>Dream. Plan. Travel. Repeat.</p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="explorer.html">Destinations</a></li>
+          <li><a href="budget.html">Budget Planner</a></li>
+          <li><a href="feedback.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4>Newsletter</h4>
+
+        <form id="newsletterForm">
+          <label for="newsletterEmail">Email:</label>
+          <input
+            type="email"
+            id="newsletterEmail"
+            placeholder="Enter your email"
+            required
+          >
+
+          <button type="submit" class="btn">
+            Subscribe
+          </button>
+        </form>
+
+        <p id="newsletterMsg" class="message"></p>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:10px;">
+      © 2026 TravelNest. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/generator.js"></script>
+</body>
+</html>
