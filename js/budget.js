@@ -96,9 +96,9 @@ function displayBudgets() {
 
     li.innerHTML = `
       <span>
-        <strong>${item.destination}</strong> —
-        ${item.days} days @ $${item.dailyBudget}/day =
-        <strong>$${item.total}</strong>
+        <strong>${item.destination} destinations</strong> —
+        ${item.days} days @ $${item.dailyBudget} per day =
+        <strong>Total cost: $${item.total}</strong>
         <span style="margin-left:8px; color: var(--muted);">
           (${item.status})
         </span>
